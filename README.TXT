@@ -24,7 +24,7 @@ NOTE: Each class build-master should fork the main repo to a new repo before sta
 
 3) Clone (first time, each class build-master should fork, so that each class has their own copy) the repository into the directory where git bash is pointing:
 
-    git clone https://github.com/DHS-CP/GreenfootSeatingChartMaster2023-24.git  (this will change based on fork created by build-master(s).
+    git clone https://github.com/DHS-CP/P3_GreenfootSeatingChartMaster2023-24.git  (this will change based on fork created by build-master(s).
 
 NOTE: This should set up all initial conditions for GIT and avoid a lot of confusion.
 
