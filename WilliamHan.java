@@ -56,6 +56,7 @@ public class WilliamHan extends Student implements SpecialInterestOrHobby
      * the 'Act' or 'Run' button gets pressed in the environment.
      */   
     boolean c = false;
+    GreenfootImage sleeping = new GreenfootImage("williamhanSleeping.jpg");
     public void act() 
     {
         // Add your action code here.
@@ -73,6 +74,7 @@ public class WilliamHan extends Student implements SpecialInterestOrHobby
             // Call the sitDown() method to move back  to your seat
                 //Sleep();
                 c = true;
+                setImage(sleeping);
                 returnToSeat();  // Kilgore Trount's special method... Please write one of your own. You can use this, but please modify it and be creative.
                 timeStamp = System.currentTimeMillis();
                 sitDown();
@@ -92,10 +94,12 @@ public class WilliamHan extends Student implements SpecialInterestOrHobby
         }
         //System.out.println("sleeping");
         //System.out.println(growMod);
+        setImage(sleeping);
         GreenfootImage image = getImage();
         currentTime = System.currentTimeMillis();
         if (currentTime >= timeStamp + 10000){
             c = false;
+            setImage("williamhan.jpg");
         }
        // image.scale(100000,10000);
             currentTime = System.currentTimeMillis();
