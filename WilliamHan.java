@@ -41,8 +41,8 @@ public class WilliamHan extends Student implements SpecialInterestOrHobby
     public WilliamHan() {
         firstName="William";
         lastName="Han";
-        mySeatX=5;
-        mySeatY=10;
+        mySeatX=2;
+        mySeatY=7;
        // imgFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
        portraitFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
        standingFile=firstName.toLowerCase()+ lastName.toLowerCase()+"-standing.jpg";
@@ -78,6 +78,7 @@ public class WilliamHan extends Student implements SpecialInterestOrHobby
                 returnToSeat();  // Kilgore Trount's special method... Please write one of your own. You can use this, but please modify it and be creative.
                 timeStamp = System.currentTimeMillis();
                 sitDown();
+                sayName(soundFile);
             }
         if (c){
             Sleep();
@@ -97,7 +98,7 @@ public class WilliamHan extends Student implements SpecialInterestOrHobby
         setImage(sleeping);
         GreenfootImage image = getImage();
         currentTime = System.currentTimeMillis();
-        if (currentTime >= timeStamp + 10000){
+        if (currentTime >= timeStamp + 15000){
             c = false;
             setImage("williamhan.jpg");
         }

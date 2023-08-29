@@ -154,7 +154,7 @@ public class Classroom extends World
         kilgoretrout.assignSeat();
   
         WilliamHan williamhan = new WilliamHan();
-        addObject(williamhan,5,10);
+        addObject(williamhan,2,7);
         williamhan.assignSeat();
         
     }
