@@ -156,7 +156,7 @@ public class Classroom extends World
         addObject(nakulsoneji,5,10);
         nakulsoneji.assignSeat();
         ManningWu manningwu = new ManningWu();
-        addObject(manningwu,5,10);
+        addObject(manningwu,3,7);
         manningwu.assignSeat();
   
     }
