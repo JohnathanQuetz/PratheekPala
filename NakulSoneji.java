@@ -96,30 +96,21 @@ public class NakulSoneji extends Student implements SpecialInterestOrHobby
      * You should write your own methods to perform your own animation for your character/avatar.
      */
     public void circleClass(){
-        setLocation(0,0);
-         Greenfoot.delay(10);
-        // move right
-        for (int i=1;i<=9;i++){
-            setLocation(i,0);
-            Greenfoot.delay(10);
+        Greenfoot.delay(10);
+        setImage("fireworks.jpg");
+        
+        for (int i = 0; i < 5; i++) {
+            if (i % 2 == 0) {
+                setLocation(5, 15);
+            }
+            else {
+                setLocation(5, 5);
+            }
         }
-        // move back
-        for (int i=1;i<=5;i++){
-            setLocation(9,i);
-            Greenfoot.delay(10);
-        }      
-         // move left
-        for (int i=9;i>=0;i--){
-            setLocation(i,5);
-            Greenfoot.delay(10);
-        }      
-              // move Forward
-        for (int i=5;i>=0;i--){
-            setLocation(0,i);
-            Greenfoot.delay(10);
-        }   
-           Greenfoot.delay(20);
-           returnToSeat();
+        // move right
+        
+        Greenfoot.delay(20);
+        returnToSeat();
     }
      /**
      * myHobby is one of the interfaces provided.  
