@@ -155,6 +155,9 @@ public class Classroom extends World
         NakulSoneji nakulsoneji = new NakulSoneji();
         addObject(nakulsoneji,5,10);
         nakulsoneji.assignSeat();
+        ManningWu manningwu = new ManningWu();
+        addObject(manningwu,5,10);
+        manningwu.assignSeat();
   
     }
     
