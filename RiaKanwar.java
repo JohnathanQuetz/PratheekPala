@@ -44,8 +44,8 @@ public class RiaKanwar extends Student implements StudentAthlete
     public RiaKanwar() {
         firstName = "Ria";
         lastName = "Kanwar";
-        mySeatX = 6;
-        mySeatY=4;
+        mySeatX = 8;
+        mySeatY= 7;
         
        // imgFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
         portraitFile = firstName.toLowerCase() + lastName.toLowerCase() + ".jpg";

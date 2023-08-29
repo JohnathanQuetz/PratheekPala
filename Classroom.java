@@ -154,7 +154,7 @@ public class Classroom extends World
         kilgoretrout.assignSeat();
         
         RiaKanwar riakanwar = new RiaKanwar();
-        addObject(riakanwar,6,4);
+        addObject(riakanwar,8,7);
         riakanwar.assignSeat();       
   
     }
