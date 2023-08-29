@@ -82,7 +82,7 @@ public class RiaKanwar extends Student implements StudentAthlete
                 // Kilgore Trount's special method... 
                 // Please write one of your own. You can use this, but please modify it
                 // and be creative.
-                circleClass();
+                throwBirdie();
            
                 sitDown();
             }
@@ -107,31 +107,32 @@ public class RiaKanwar extends Student implements StudentAthlete
      * This is a local method specific to the KilgoreTrout class used to animate the character once the image is clicked on.
      * You should write your own methods to perform your own animation for your character/avatar.
      */
-    public void circleClass(){
-        setLocation(0,0);
-         Greenfoot.delay(10);
-        // move right
+    public void throwBirdie(){
+        String birdie = "badmintonbirdie.png";
+        setImage(birdie);
+        // move down
         for (int i=1;i<=9;i++){
-            setLocation(i,0);
+            setLocation(getX()+1,getY()+1);
             Greenfoot.delay(10);
         }
+        // move left
+        for (int i=1;i<=7;i++){
+            setLocation(getX()-2,getY() - 1);
+            Greenfoot.delay(10);
+        }      
+         // move right
+        for (int i=4;i>=0;i--){
+            setLocation(getX()+1,getY()-2);
+            Greenfoot.delay(10);
+        }  
         // move back
-        for (int i=1;i<=5;i++){
-            setLocation(9,i);
+        for (int i=1;i<=2;i++){
+            setLocation(getX()+1,getY()+2);
             Greenfoot.delay(10);
-        }      
-         // move left
-        for (int i=9;i>=0;i--){
-            setLocation(i,5);
-            Greenfoot.delay(10);
-        }      
-              // move Forward
-        for (int i=5;i>=0;i--){
-            setLocation(0,i);
-            Greenfoot.delay(10);
-        }   
-           Greenfoot.delay(20);
-           returnToSeat();
+        }
+        
+        Greenfoot.delay(20);
+        returnToSeat();
     }
      /**
      * mySport is one of the interfaces provided.  
