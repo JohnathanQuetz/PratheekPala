@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import java.util.Random;
 /**
  * The NakulSoneji class can be used as a model for your own class that represents you and your seating location in AP CSA
  * 
@@ -70,7 +70,7 @@ public class NakulSoneji extends Student implements SpecialInterestOrHobby
             // combination of all of those types of actions, or more. Make sure to save the original image if you manipulate it, so that you can put it back.
             // Call the sitDown() method to move back  to your seat
             
-                circleClass();  // Nakul Trount's special method... Please write one of your own. You can use this, but please modify it and be creative.
+                bigFireworks();  // Nakul Trount's special method... Please write one of your own. You can use this, but please modify it and be creative.
            
                 sitDown();
             }
@@ -95,21 +95,26 @@ public class NakulSoneji extends Student implements SpecialInterestOrHobby
      * This is a local method specific to the NakulSoneji class used to animate the character once the image is clicked on.
      * You should write your own methods to perform your own animation for your character/avatar.
      */
-    public void circleClass(){
-        Greenfoot.delay(10);
+    public void bigFireworks() {
+        NakulSoneji image = new NakulSoneji();
+        
+        getWorld().addObject(image, 5, 10);
+        image.getWorld().addObject(this, 5, 10);
+        
+        image.setImage("nakulsoneji-standing.jpg");
         setImage("fireworks.jpg");
-        
-        for (int i = 0; i < 5; i++) {
-            if (i % 2 == 0) {
-                setLocation(5, 15);
-            }
-            else {
-                setLocation(5, 5);
-            }
+
+        for (int i = 0; i < 100; i++) {
+            setLocation((int)(Math.random() * 3) + 5, (int)(Math.random() * 3) + 10);
+            Greenfoot.delay(1);
+            image.setLocation((int)(-1 * Math.random() * 3) + 5, (int)(-1 * Math.random() * 3) + 10);
+            Greenfoot.delay(1);
+            setLocation((int)(-1 * Math.random() * 3) + 5, (int)(-1 * Math.random() * 3) + 10);
+            Greenfoot.delay(1);
+            image.setLocation((int)(Math.random() * 3) + 5, (int)(Math.random() * 3) + 10);
+            Greenfoot.delay(1);
         }
-        // move right
-        
-        Greenfoot.delay(20);
+        getWorld().removeObject(image);
         returnToSeat();
     }
      /**
