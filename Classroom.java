@@ -142,13 +142,13 @@ public class Classroom extends World
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.
      */
-    
+
     private void prepare()
     {
         createDeskLayout();
- // Each student needs to create their specific instance following the KilgoreTrout example.
- // Your current seatX and seatY can be found by right clicking on the corresponding seat in the Classrom.
- // and then clicking on the inspect text
+        // Each student needs to create their specific instance following the KilgoreTrout example.
+        // Your current seatX and seatY can be found by right clicking on the corresponding seat in the Classrom.
+        // and then clicking on the inspect text
         KilgoreTrout kilgoretrout = new KilgoreTrout();
         addObject(kilgoretrout,2,3);
         kilgoretrout.assignSeat();
@@ -158,7 +158,10 @@ public class Classroom extends World
         ManningWu manningwu = new ManningWu();
         addObject(manningwu,3,7);
         manningwu.assignSeat();
-  
+
+        PingyaoLiu pingyaoLiu = new PingyaoLiu();
+        addObject(pingyaoLiu,6,3);
+        pingyaoLiu.assignSeat();
     }
     
     public List<Student> getAllStudents(){
