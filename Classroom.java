@@ -175,6 +175,10 @@ public class Classroom extends World
         addObject(pingyaoLiu,6,3);
         pingyaoLiu.assignSeat();
         
+        PratheekPala pratheekpala = new PratheekPala();
+        addObject(pratheekpala,6,7);
+        pratheekpala.assignSeat();
+        
         // Test Sajeev,Pingyao,Sid,Aarush Method assignSeatsToDeskGroups()
         StudentDeskGroup.assignSeatsToDeskGroups();
         // Test Sajeev,Pingyao,Sid,Aarush Method getCurrentStudents() on table 7
