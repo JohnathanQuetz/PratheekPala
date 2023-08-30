@@ -158,6 +158,12 @@ public class Classroom extends World
         ManningWu manningwu = new ManningWu();
         addObject(manningwu,3,7);
         manningwu.assignSeat();
+  
+        WilliamHan williamhan = new WilliamHan();
+        addObject(williamhan,2,7);
+        williamhan.assignSeat();
+        
+
         SajeevMagesh sajeevmagesh = new SajeevMagesh();
         addObject(sajeevmagesh,6,4);
         sajeevmagesh.assignSeat();
@@ -169,6 +175,7 @@ public class Classroom extends World
         StudentDeskGroup.assignSeatsToDeskGroups();
         // Test Sajeev,Pingyao,Sid,Aarush Method getCurrentStudents() on table 7
         StudentDeskGroup.getCurrentStudents(getObjects(Student.class), 7);
+
     }
     
     public List<Student> getAllStudents(){
