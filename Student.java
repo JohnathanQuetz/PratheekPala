@@ -70,5 +70,11 @@ public abstract class Student extends Actor
         mySeatX=getX();
         mySeatY=getY();
     }
- 
+    public void getTablemateHobbies(int tableGroupNumber) {
+        if (tableGroupNumber == 7) {
+            setLocation(mySeatX + 1, mySeatY); 
+            Greenfoot.delay(100);
+            System.out.println(this.getFirstName());
+        }
+    }
 }
